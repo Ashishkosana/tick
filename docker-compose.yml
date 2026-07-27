@@ -1,0 +1,16 @@
+# Postgres for the SKIP LOCKED concurrency demo. Host port 5434 to avoid clashing
+# with a local Postgres (5432) or the ledgerline container (5433).
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: tick
+      POSTGRES_PASSWORD: tick
+      POSTGRES_DB: tick
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
