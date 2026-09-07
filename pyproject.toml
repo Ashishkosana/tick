@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A durable job/cron scheduler on Postgres: SKIP LOCKED claiming, leases, retries, and crash recovery."
 requires-python = ">=3.11"
 dependencies = [
-    "sqlalchemy>=2.0",
+    "sqlalchemy>=2.0.52",
     "pydantic>=2.7",
 ]
 
